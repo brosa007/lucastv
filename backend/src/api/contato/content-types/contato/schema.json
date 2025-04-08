@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "contatoes",
+  "info": {
+    "singularName": "contato",
+    "pluralName": "contatoes",
+    "displayName": "Contato"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Numero": {
+      "type": "integer"
+    }
+  }
+}
