@@ -1,5 +1,36 @@
-# Ignorar pastas geradas automaticamente
-frontend/.next/
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de dependências
 frontend/node_modules/
 backend/node_modules/
+
+# Pastas temporárias e caches
+frontend/.next/
 backend/.tmp/
+backend/.cache/
+
+# Arquivos de build
+frontend/out/
+backend/build/
+
+# Arquivos de ambiente (não versionar dados sensíveis)
+.env
+.env.* 
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos do Strapi que não precisam ser versionados
+backend/public/uploads/
+
+# Outros
+*.local
