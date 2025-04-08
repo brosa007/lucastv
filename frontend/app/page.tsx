@@ -1,10 +1,32 @@
 import { Button } from "@/components/ui/button";
+import qs from "qs";
 
+const homePageQuery = qs.stringify({
+  populate: {
+    blocks: {
+      populate: {
+        image: {
+          fields: ["url", "alternativeText"],
+        },
+        link: {
+          populate: true,
+        },
+      },
+    },
+  },
+});
 async function getStrapiData(path: string) {
   const baseURL = "http://localhost:1337";
+
+  const url = new URL(path, baseURL);
+  url.search = homePageQuery;
+
+  console.log("Fetching data from:", url.href);
+
   try {
-    const response = await fetch(baseURL + path);
+    const response = await fetch(url.href);
     const data = await response.json();
+    console.log("Fetched data:", data);
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);

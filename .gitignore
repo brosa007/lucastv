@@ -1,0 +1,5 @@
+# Ignorar pastas geradas automaticamente
+frontend/.next/
+frontend/node_modules/
+backend/node_modules/
+backend/.tmp/
